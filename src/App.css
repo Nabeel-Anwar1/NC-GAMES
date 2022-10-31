@@ -6,10 +6,6 @@
   background-color:darkgray ;
 }
 
-.reviewContent {
-
-}
-
 .reviewsList {
 list-style: none;
 }
@@ -21,4 +17,13 @@ list-style: none;
   border: solid;
   border-radius: 20px;
   width: 90%;
+}
+
+.individualReview:hover {
+  background-color: dimgray;
+}
+
+.individualReview:active {
+  box-shadow: 0 10px #666;
+  transform: translateY(7px);
 }
