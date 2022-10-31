@@ -17,22 +17,21 @@ const Reviews = () => {
     return <div className="reviewContent">
         <ul className="reviewsList">
             {reviews.map((review) => {
-                return <div key={review.review_id} className="individualReview">
-                    {<li >
-                    Review By: {review.owner} <br />
-                    Title: {review.title}    <br />
-                    Review: {review.review_body} <br />
-                    Votes: {review.votes} <br />
-                    {new Date(review.created_at).toLocaleDateString(
-  'en-gb',
-  {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  }
-)}
-                    </li>}
-                </div>
+            return <div key={review.review_id} className="individualReview">
+                {<li >
+                    <b><u>Review By: {review.owner} </u></b> <br />
+                    <b><u>Title:</u></b> {review.title}    <br />
+                    <b><u>Review:</u></b> {review.review_body} <br />
+                    <b><u>Votes:</u></b> {review.votes} <br />
+                    {new Date(review.created_at).toLocaleDateString('en-gb',
+                        {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        }
+                    )}
+                </li>}
+            </div>
             })}
         </ul>
     </div>
