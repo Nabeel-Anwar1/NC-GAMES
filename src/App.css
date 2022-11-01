@@ -8,9 +8,12 @@
 
 .reviewsList {
 list-style: none;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
 }
 
 .individualReview {
+
   background-color:slategrey ;
   margin-bottom: 1cm;
   padding: 2%;
@@ -26,4 +29,11 @@ list-style: none;
 .individualReview:active {
   box-shadow: 0 10px #666;
   transform: translateY(7px);
+}
+
+.header {
+  background-color:#666;
+  padding: 10px;
+  top: 0;
+  width: 100%;
 }
