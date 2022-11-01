@@ -1,23 +1,19 @@
 import { useEffect, useState } from "react"
 import { fetchReviews } from "../api"
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Reviews = () => {
-    const start = useParams()
     const [isLoading, setIsLoading] = useState(true)
     const [reviews, setReviews] = useState([])
-    const [category, setCategory] = useState("")
+    const [category, setCategory] = useState("all")
 
     useEffect(()=>{
-        if (typeof start.category === "string" && start.category !=="all"){
-        setCategory(start.category)
-        }
         setIsLoading(true)
         fetchReviews(category).then((review) => {
             setReviews(review)
             setIsLoading(false)
         })
-    }, [category, start.category])
+    }, [category])
 
     const handleClick = (cat) => {
         setCategory(cat)
@@ -25,7 +21,7 @@ const Reviews = () => {
 
     if (isLoading) return <h3>Loading...</h3>
     return <div className="reviewContent">
-        <div className="categoryNav">
+        <section className="categoryNav">
             <ul className="categoryList">
             Choose A Category: <br />
                 <Link to="/reviews"><li><button value="" onClick={(event) => {handleClick(event.target.value)}}>All</button></li></Link>
@@ -36,8 +32,8 @@ const Reviews = () => {
                 <Link to="/reviews/category/deck-building"><li><button value="deck-building" onClick={(event) => {handleClick(event.target.value)}}>Deck Building</button></li></Link>
                 <Link to="/reviews/category/engine-building"><li><button value="engine-building" onClick={(event) => {handleClick(event.target.value)}}>Engine Building</button></li></Link>
             </ul>
-        </div>
-
+        </section>
+    <section>
         <ul className="reviewsList">
             {reviews.map((review) => {
             return <div key={review.review_id} className="individualReview">
@@ -58,6 +54,7 @@ const Reviews = () => {
             </div>
             })}
         </ul>
+    </section>
     </div>
 }
 

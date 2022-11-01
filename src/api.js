@@ -5,7 +5,7 @@ const gamesApi = axios.create({
 });
 
 export const fetchReviews = (query) => {
-  if (query === "") {
+  if (query === "all") {
     return gamesApi.get(`/reviews`).then((response) => {
       return response.data.reviews;
     });
