@@ -37,7 +37,7 @@ const Reviews = () => {
         <ul className="reviewsList">
             {reviews.map((review) => {
             return <div key={review.review_id} className="individualReview">
-                {<li >
+                {<Link to={`/reviews/${review.review_id}` }><li className="list-items">
                     <b><u>Review By: {review.owner} </u></b> <br />
                     <b><u>Title:</u></b> {review.title}    <br />
                     <b><u>Category:</u></b> {review.category} <br />
@@ -50,7 +50,7 @@ const Reviews = () => {
                             day: 'numeric'
                         }
                     )}
-                </li>}
+                </li></Link>}
             </div>
             })}
         </ul>
