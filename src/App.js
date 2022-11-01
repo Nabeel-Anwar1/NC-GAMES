@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/reviews/category/:category" element={<Reviews />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -37,3 +37,43 @@ grid-template-columns: 1fr 1fr 1fr;
   top: 0;
   width: 100%;
 }
+
+.dropdown {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: large;
+text-align: center;
+}
+
+.dropdown select {
+  font-size: large;
+}
+
+.categoryNav {
+  background-color:rgb(134, 136, 139);
+  padding: 10px;
+}
+
+.categoryList {
+  text-align: center;
+  list-style: none;
+}
+
+.categoryList button {
+  background-color:rgb(238, 235, 235);
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid;
+}
+
+.categoryList button:hover {
+background-color:lightsteelblue;
+}
+
+.categoryList li {
+  width: 12%;
+  display: inline-block;
+  margin-right: 4px;
+}
