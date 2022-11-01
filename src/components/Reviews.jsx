@@ -17,7 +17,7 @@ const Reviews = () => {
             setReviews(review)
             setIsLoading(false)
         })
-    }, [category])
+    }, [category,start.category])
 
     const handleClick = (cat) => {
         setCategory(cat)
@@ -28,13 +28,13 @@ const Reviews = () => {
         <div className="categoryNav">
             <ul className="categoryList">
             Choose A Category: <br />
-                <Link to="/reviews/all"><li><button value="" onClick={(event) => {handleClick(event.target.value)}}>All</button></li></Link>
-                <Link to="/reviews/hidden-roles"><li><button value="hidden-roles" onClick={(event) => {handleClick(event.target.value)}}>Hidden Roles</button></li></Link>
-                <Link to="/reviews/dexterity"><li><button value="dexterity" onClick={(event) => {handleClick(event.target.value)}}>Dexterity</button></li></Link>
-                <Link to="/reviews/push-your-luck"><li><button value="push-your-luck" onClick={(event) => {handleClick(event.target.value)}}>Push Your Luck</button></li></Link>
-                <Link to="/reviews/roll-and-write"><li><button value="roll-and-write" onClick={(event) => {handleClick(event.target.value)}}>Roll and Write</button></li></Link>
-                <Link to="/reviews/deck-building"><li><button value="deck-building" onClick={(event) => {handleClick(event.target.value)}}>Deck Building</button></li></Link>
-                <Link to="/reviews/engine-building"><li><button value="engine-building" onClick={(event) => {handleClick(event.target.value)}}>Engine Building</button></li></Link>
+                <Link to="/reviews"><li><button value="" onClick={(event) => {handleClick(event.target.value)}}>All</button></li></Link>
+                <Link to="/reviews/category/hidden-roles"><li><button value="hidden-roles" onClick={(event) => {handleClick(event.target.value)}}>Hidden Roles</button></li></Link>
+                <Link to="/reviews/category/dexterity"><li><button value="dexterity" onClick={(event) => {handleClick(event.target.value)}}>Dexterity</button></li></Link>
+                <Link to="/reviews/category/push-your-luck"><li><button value="push-your-luck" onClick={(event) => {handleClick(event.target.value)}}>Push Your Luck</button></li></Link>
+                <Link to="/reviews/category/roll-and-write"><li><button value="roll-and-write" onClick={(event) => {handleClick(event.target.value)}}>Roll and Write</button></li></Link>
+                <Link to="/reviews/category/deck-building"><li><button value="deck-building" onClick={(event) => {handleClick(event.target.value)}}>Deck Building</button></li></Link>
+                <Link to="/reviews/category/engine-building"><li><button value="engine-building" onClick={(event) => {handleClick(event.target.value)}}>Engine Building</button></li></Link>
             </ul>
         </div>
 
