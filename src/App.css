@@ -37,3 +37,14 @@ grid-template-columns: 1fr 1fr 1fr;
   top: 0;
   width: 100%;
 }
+
+.dropdown {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: large;
+text-align: center;
+}
+
+.dropdown select {
+  font-size: large;
+}
