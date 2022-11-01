@@ -27,7 +27,7 @@ const Reviews = () => {
     return <div className="reviewContent">
         <div className="categoryNav">
             <ul className="categoryList">
-            Choose A Category:
+            Choose A Category: <br />
                 <Link to="/reviews/all"><li><button value="" onClick={(event) => {handleClick(event.target.value)}}>All</button></li></Link>
                 <Link to="/reviews/hidden-roles"><li><button value="hidden-roles" onClick={(event) => {handleClick(event.target.value)}}>Hidden Roles</button></li></Link>
                 <Link to="/reviews/dexterity"><li><button value="dexterity" onClick={(event) => {handleClick(event.target.value)}}>Dexterity</button></li></Link>
