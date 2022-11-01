@@ -6,7 +6,7 @@ import Reviews from "./components/Reviews";
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <BrowserRouter>
         <Header />
         <Routes>

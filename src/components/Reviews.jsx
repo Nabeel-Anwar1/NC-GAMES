@@ -21,7 +21,7 @@ const Reviews = () => {
                 {<li >
                     <b><u>Review By: {review.owner} </u></b> <br />
                     <b><u>Title:</u></b> {review.title}    <br />
-                    <b><u>Review:</u></b> {review.review_body} <br />
+                    <b><u>Comments:</u></b> {review.comment_count}  <br />
                     <b><u>Votes:</u></b> {review.votes} <br />
                     {new Date(review.created_at).toLocaleDateString('en-gb',
                         {
