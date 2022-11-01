@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { fetchReviews } from "./api"
+import { fetchReviews } from "../api"
 import { Link, useParams } from "react-router-dom";
 
 const Reviews = () => {
@@ -17,7 +17,7 @@ const Reviews = () => {
             setReviews(review)
             setIsLoading(false)
         })
-    }, [category,start.category])
+    }, [category, start.category])
 
     const handleClick = (cat) => {
         setCategory(cat)
