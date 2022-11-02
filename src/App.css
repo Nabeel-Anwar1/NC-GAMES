@@ -83,3 +83,11 @@ a {
   color: black !important; 
   font-size: large;
 }
+
+.reviewImg {
+  width: 200px;
+}
+
+.singleReviewPage {
+  text-align: center;
+}
