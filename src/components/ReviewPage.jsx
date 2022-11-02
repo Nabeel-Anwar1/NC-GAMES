@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchSingleReview } from "../api"
+import Votes from "./Votes"
 
 const ReviewPage = () => {
     const [review, setReview] = useState({})
@@ -28,7 +29,7 @@ const ReviewPage = () => {
                             day: 'numeric'
                         }
                     )} </p>
-        <p>Votes: {review.votes}</p>
+        <p>Votes: <Votes review_id={review.review_id} votes={review.votes} /></p>
         <p>Comments: {review.comment_count} </p>
     </section>
 }

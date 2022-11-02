@@ -10,6 +10,7 @@
 list-style: none;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
+font-size: large;
 }
 
 .individualReview {
@@ -22,13 +23,13 @@ grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
 }
 
-.individualReview:hover {
-  background-color: dimgray;
-}
-
 .individualReview:active {
   box-shadow: 0 10px #666;
   transform: translateY(7px);
+}
+
+.individualReview:hover {
+  background-color: dimgray;
 }
 
 .header {
@@ -90,4 +91,35 @@ a {
 
 .singleReviewPage {
   text-align: center;
+}
+
+.votesSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.votesSection button {
+  border: solid;
+  background-color:rgb(238, 235, 235);
+  cursor: pointer;
+  margin: 0 10px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.votesSection button:hover {
+background-color:lightsteelblue;
+}
+
+.votesSection button:active {
+  box-shadow: 0 10px #666;
+  transform: translateY(7px);
+}
+.upvote{
+  font-size: larger;
+}
+
+.downvote {
+  font-size: larger;
 }
