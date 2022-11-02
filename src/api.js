@@ -15,3 +15,9 @@ export const fetchReviews = (query) => {
     });
   }
 };
+
+export const fetchSingleReview = (id) => {
+  return gamesApi.get(`/reviews/${id}`).then((response) => {
+    return response.data.review;
+  });
+};

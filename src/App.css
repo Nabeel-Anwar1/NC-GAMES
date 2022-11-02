@@ -13,13 +13,13 @@ grid-template-columns: 1fr 1fr 1fr;
 }
 
 .individualReview {
-
   background-color:slategrey ;
   margin-bottom: 1cm;
   padding: 2%;
   border: solid;
   border-radius: 20px;
   width: 90%;
+  text-align: center;
 }
 
 .individualReview:hover {
@@ -76,4 +76,18 @@ background-color:lightsteelblue;
   width: 12%;
   display: inline-block;
   margin-right: 4px;
+}
+
+a {
+  text-decoration: none ;
+  color: black ; 
+  font-size: large;
+}
+
+.reviewImg {
+  width: 200px;
+}
+
+.singleReviewPage {
+  text-align: center;
 }
