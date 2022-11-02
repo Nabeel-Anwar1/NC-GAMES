@@ -21,3 +21,9 @@ export const fetchSingleReview = (id) => {
     return response.data.review;
   });
 };
+
+export const patchVotes = (id, votes) => {
+  return gamesApi.patch(`/reviews/${id}`, votes).then((response) => {
+    return response.data.reviews;
+  });
+};
