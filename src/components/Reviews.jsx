@@ -38,11 +38,12 @@ const Reviews = () => {
         <ul className="reviewsList">
             {reviews.map((review) => {
             return <div key={review.review_id} className="individualReview">
-                {<Link to={`/reviews/${review.review_id}` }><li className="list-items">
+                {<li className="list-items"><Link to={`/reviews/${review.review_id}` }>
                     <b><u>Review By: {review.owner} </u></b> <br />
                     <b><u>Title:</u></b> {review.title}    <br />
                     <b><u>Category:</u></b> {review.category} <br />
                     <b><u>Comments:</u></b> {review.comment_count}  <br />
+                    </Link>
                     <b><u>Votes:</u></b> <Votes review_id={review.review_id} votes={review.votes} /><br />
                     {new Date(review.created_at).toLocaleDateString('en-gb',
                         {
@@ -51,7 +52,7 @@ const Reviews = () => {
                             day: 'numeric'
                         }
                     )}
-                </li></Link>}
+                </li>}
             </div>
             })}
         </ul>

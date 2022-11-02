@@ -26,11 +26,6 @@ grid-template-columns: 1fr 1fr 1fr;
   background-color: dimgray;
 }
 
-.individualReview:active {
-  box-shadow: 0 10px #666;
-  transform: translateY(7px);
-}
-
 .header {
   background-color:#666;
   padding: 10px;
@@ -90,4 +85,26 @@ a {
 
 .singleReviewPage {
   text-align: center;
+}
+
+.votesSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.votesSection button {
+  border: solid;
+  background-color:rgb(238, 235, 235);
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.votesSection button:hover {
+background-color:lightsteelblue;
+}
+
+.votesSection button:active {
+  box-shadow: 0 10px #666;
+  transform: translateY(7px);
 }

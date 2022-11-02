@@ -18,9 +18,9 @@ patchVotes(review_id, {inc_votes: vote}).catch((err) => {
 }
 
 return <section className="votesSection">
-    <button onClick={() => {handleVote(1)}}>+</button>
+    <button className="upvote" onClick={() => {handleVote(1)}}>+</button>
     <p className="votes">{String(votes+newVotes)}</p>
-    <button onClick={() => {handleVote(-1)}}>-</button>
+    <button className="downvote" onClick={() => {handleVote(-1)}}>-</button>
 </section>
 }
 
