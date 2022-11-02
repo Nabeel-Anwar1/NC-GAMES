@@ -10,6 +10,7 @@
 list-style: none;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
+font-size: large;
 }
 
 .individualReview {
@@ -98,6 +99,8 @@ a {
   background-color:rgb(238, 235, 235);
   cursor: pointer;
   margin: 0 10px;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .votesSection button:hover {
@@ -107,4 +110,11 @@ background-color:lightsteelblue;
 .votesSection button:active {
   box-shadow: 0 10px #666;
   transform: translateY(7px);
+}
+.upvote{
+  font-size: larger;
+}
+
+.downvote {
+  font-size: larger;
 }
