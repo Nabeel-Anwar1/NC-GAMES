@@ -23,6 +23,11 @@ font-size: large;
   text-align: center;
 }
 
+.individualReview:active {
+  box-shadow: 0 10px #666;
+  transform: translateY(7px);
+}
+
 .individualReview:hover {
   background-color: dimgray;
 }
