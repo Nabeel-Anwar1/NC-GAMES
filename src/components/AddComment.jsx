@@ -17,15 +17,15 @@ const AddComment = ({review_id, loggedIn, comments, setComments}) => {
         setNewComment(event.target.value)
     }
 
-    return     <form className="comment__form" onSubmit={handleSubmit}>
+    return   <form className="commentForm" onSubmit={handleSubmit}>
     <textarea
-      className="comment-input"
+      className="commentInput"
       value={newComment}
       placeholder="Write your comment here!"
       onChange={handleChange}
       required
     ></textarea>
-    <button type="submit" className="comment-button">
+    <button type="submit" className="commentButton">
       Post Comment!
     </button>
   </form>
