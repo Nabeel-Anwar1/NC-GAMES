@@ -33,3 +33,11 @@ export const fetchComments = (id) => {
     return response.data.comments;
   });
 };
+
+export const postComment = (id, username, body) => {
+  return gamesApi
+    .post(`/reviews/${id}/comments`, { username, body })
+    .then((response) => {
+      return response.data.comment;
+    });
+};
