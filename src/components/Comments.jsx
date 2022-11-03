@@ -12,7 +12,7 @@ const Comments = ({review_id}) => {
 
 return <section className="commentsContainer">
     <ul className="commentsList">
-    {comments.map((comment)=>{
+    {comments.length === 0 ? <h3>No comments!</h3> : comments.map((comment)=>{
             return <li className="singleComment" key={`${comment.comment_id}`}>
                 {comment.body}
                 <p className="commentText">

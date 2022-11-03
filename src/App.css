@@ -126,14 +126,14 @@ background-color:lightsteelblue;
 
 .commentsList {
   list-style: none;
-  text-align: center;
-  margin-left: 20%;
-  margin-right: 20%;
+  width: 30%;
 }
 
 .commentsContainer {
-
+display: flex;
+justify-content: center;
 }
+
 
 .singleComment {
   background-color:rgba(238, 235, 235, 0.698);
