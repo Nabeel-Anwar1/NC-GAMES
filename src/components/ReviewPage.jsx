@@ -4,7 +4,8 @@ import { fetchSingleReview } from "../api"
 import Votes from "./Votes"
 import Comments from "./Comments"
 
-const ReviewPage = () => {
+const ReviewPage = (props) => {
+    const { loggedIn } = props
     const [review, setReview] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     const {review_id} = useParams()
@@ -32,7 +33,7 @@ const ReviewPage = () => {
                     )} </p>
         Votes: <Votes review_id={review.review_id} votes={review.votes} />
         <p>Comments: {review.comment_count} </p>
-        <Comments review_id={review.review_id} />
+        <Comments review_id={review.review_id} loggedIn={loggedIn} />
     </section>
 }
 
