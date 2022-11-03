@@ -27,3 +27,9 @@ export const patchVotes = (id, votes) => {
     return response.data.reviews;
   });
 };
+
+export const fetchComments = (id) => {
+  return gamesApi.get(`/reviews/${id}/comments`).then((response) => {
+    return response.data.comments;
+  });
+};
