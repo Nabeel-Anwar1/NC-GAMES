@@ -5,21 +5,25 @@ const Comments = ({review_id}) => {
     const [comments, setComments] = useState([])
 
     useEffect(() => {
-        console.log("He")
         fetchComments(review_id).then((data)=>{
-            console.log(data)
            setComments(data)
         })
     },[review_id])
 
-return <section className="comments">
+return <section className="commentsContainer">
     <ul className="commentsList">
     {comments.map((comment)=>{
             return <li className="singleComment" key={`${comment.comment_id}`}>
                 {comment.body}
                 <p className="commentText">
-                    {comment.author}
-                    {comment.created_at}
+                    User: {comment.author} <br /> <br />
+                    Posted: {new Date(comment.created_at).toLocaleDateString('en-gb',
+                        {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        }
+                    )}
                 </p>
             </li>
         })}

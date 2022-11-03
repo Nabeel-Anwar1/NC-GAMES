@@ -123,3 +123,21 @@ background-color:lightsteelblue;
 .downvote {
   font-size: larger;
 }
+
+.commentsList {
+  list-style: none;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.commentsContainer {
+
+}
+
+.singleComment {
+  background-color:rgba(238, 235, 235, 0.698);
+  border: solid black;
+  margin-bottom: 2%;
+  padding: 20px;
+}
