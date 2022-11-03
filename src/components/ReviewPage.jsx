@@ -1,14 +1,15 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchSingleReview } from "../api"
 import Votes from "./Votes"
+import Comments from "./Comments"
 
 const ReviewPage = () => {
     const [review, setReview] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     const {review_id} = useParams()
 
-    useState(() => {
+    useEffect(() => {
         setIsLoading(true)
         fetchSingleReview(review_id).then((data)=>{
             setReview(data)
@@ -29,8 +30,9 @@ const ReviewPage = () => {
                             day: 'numeric'
                         }
                     )} </p>
-        <p>Votes: <Votes review_id={review.review_id} votes={review.votes} /></p>
+        Votes: <Votes review_id={review.review_id} votes={review.votes} />
         <p>Comments: {review.comment_count} </p>
+        <Comments review_id={review.review_id} />
     </section>
 }
 
