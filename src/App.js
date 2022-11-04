@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Reviews from "./components/Reviews";
 import ReviewPage from "./components/ReviewPage";
+import Error from "./components/Error";
 
 function App() {
   const [loggedIn] = useState("cooljmessy");
@@ -21,6 +22,7 @@ function App() {
             path="/reviews/:review_id"
             element={<ReviewPage loggedIn={loggedIn} />}
           />
+          <Route path="/*" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>
