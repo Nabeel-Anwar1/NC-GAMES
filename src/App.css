@@ -51,13 +51,13 @@ text-align: center;
 }
 
 .categoryNav {
-  background-color:rgb(134, 136, 139);
   padding: 10px;
 }
 
 .categoryList {
   text-align: center;
   list-style: none;
+  font-size: large;
 }
 
 .categoryList button {
@@ -170,4 +170,45 @@ margin-top: 50px;
 
 .commentButton:hover { 
   background-color: lightsteelblue;
+}
+
+.sortBy {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.orderBy {
+  font-size: large;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color:rgb(238, 235, 235);
+  padding: 5px;
+  width: 10%;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid;
+}
+
+.orderBy:hover {
+  background-color:lightsteelblue;
+  }
+  
+
+.sortDropdown {
+  font-size: large;
+  background-color:rgb(238, 235, 235);
+  width: 10%;
+  border: solid;
+}
+
+.sortText {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  margin-bottom: 2px;
+}
+
+.catButton {
+  font-size: large;
 }
