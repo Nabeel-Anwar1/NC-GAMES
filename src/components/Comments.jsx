@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { fetchComments } from "../api"
 import AddComment from "./AddComment"
+import DeleteComment from "./DeleteComment"
 
 const Comments = ({review_id, loggedIn}) => {
     const [comments, setComments] = useState([])
@@ -27,7 +28,7 @@ return <section className="commentsContainer">
                         }
                     )}
                 </p>
-                {loggedIn === comment.author ? <button className="deleteComment">Delete Comment</button> : <></>}
+                <DeleteComment loggedIn={loggedIn} comment={comment} setComments={setComments} comments={comments}/>
             </li>
         })}
     </ul>
