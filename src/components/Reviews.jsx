@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { fetchReviews } from "../api"
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const Reviews = () => {
     const [isLoading, setIsLoading] = useState(true)
@@ -8,6 +8,10 @@ const Reviews = () => {
     const [sortBy, setSortBy] = useState("created_at")
     const [orderBy, setOrderBy] = useState("desc")
     const [category, setCategory] = useState("all")
+    const [searchParams, setSearchParams] = useSearchParams({
+        sort_by: "",
+        order: "",
+    })
 
     useEffect(()=>{
         setIsLoading(true)
@@ -23,14 +27,17 @@ const Reviews = () => {
 
     const handleDropdown = (event) => {
         setSortBy(event.target.value)
+        setSearchParams({sort_by: event.target.value, order: orderBy})
     }
 
     const handleOrder = (event) => {
         if (event.target.value === "asc"){
             setOrderBy("asc")
+            setSearchParams({sort_by: sortBy, order: "asc"})
         }
         else {
             setOrderBy("desc")
+            setSearchParams({sort_by: sortBy, order: "desc"})
         }
     }
 
