@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 const Reviews = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [reviews, setReviews] = useState([])
+    const [sortBy, setSortBy] = useState("created_at")
+    const [direction, setDirection] = useState("desc")
     const [category, setCategory] = useState("all")
 
     useEffect(()=>{
@@ -17,6 +19,10 @@ const Reviews = () => {
 
     const handleClick = (cat) => {
         setCategory(cat)
+    }
+
+    const handleDropdown = (event) => {
+        setSortBy(event.target.value)
     }
 
     if (isLoading) return <h3>Loading...</h3>
@@ -32,6 +38,16 @@ const Reviews = () => {
                 <Link to="/reviews/category/deck-building"><li><button value="deck-building" onClick={(event) => {handleClick(event.target.value)}}>Deck Building</button></li></Link>
                 <Link to="/reviews/category/engine-building"><li><button value="engine-building" onClick={(event) => {handleClick(event.target.value)}}>Engine Building</button></li></Link>
             </ul>
+        </section>
+        <p className="sortText">Sort By:</p>
+        <section className="sortBy">
+        <button className="orderBy" value="asc">Ascending</button>
+            <select className="sortDropdown" value={sortBy} onChange={handleDropdown}>
+                <option value="created_at">Created at</option>
+                <option value="comment_count">Comment Count</option>
+                <option value="votes">Votes</option>
+            </select>
+            <button className="orderBy" value="desc">Descending</button>
         </section>
     <section>
         <ul className="reviewsList">
