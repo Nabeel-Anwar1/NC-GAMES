@@ -16,7 +16,7 @@ return <section className="commentsContainer">
     <ul className="commentsList">
     {comments.length === 0 ? <h3>No comments!</h3> : comments.map((comment)=>{
             return <li className="singleComment" key={`${comment.comment_id}`}>
-                {comment.body}
+                <p className="commentBody">{comment.body}</p>
                 <p className="commentText">
                     User: {comment.author} <br /> <br />
                     Posted: {new Date(comment.created_at).toLocaleDateString('en-gb',
@@ -27,6 +27,7 @@ return <section className="commentsContainer">
                         }
                     )}
                 </p>
+                {loggedIn === comment.author ? <button className="deleteComment">Delete Comment</button> : <></>}
             </li>
         })}
     </ul>

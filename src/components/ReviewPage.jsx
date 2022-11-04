@@ -22,7 +22,7 @@ const ReviewPage = (props) => {
     <section className="singleReviewPage">
         <h2>Review for: {review.title}</h2>
         <img src={`${review.review_img_url}`} alt={`${review.title}`} className="reviewImg"></img>
-        <p>{review.review_body}</p>
+        <p className="reviewBody">{review.review_body}</p>
         <p>Written By: {review.owner}</p>
         <p>Created: {new Date(review.created_at).toLocaleDateString('en-gb',
                         {

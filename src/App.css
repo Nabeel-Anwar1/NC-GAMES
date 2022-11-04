@@ -212,3 +212,19 @@ margin-top: 50px;
 .catButton {
   font-size: large;
 }
+
+.deleteComment {
+  font-size: medium;
+}
+
+.commentText {
+  font-size: medium;
+}
+
+.commentBody {
+  font-size: large;
+}
+
+.reviewBody {
+  font-size: large;
+}
