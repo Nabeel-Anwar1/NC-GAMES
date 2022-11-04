@@ -6,16 +6,16 @@ const Reviews = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [reviews, setReviews] = useState([])
     const [sortBy, setSortBy] = useState("created_at")
-    const [direction, setDirection] = useState("desc")
+    const [orderBy, setOrderBy] = useState("desc")
     const [category, setCategory] = useState("all")
 
     useEffect(()=>{
         setIsLoading(true)
-        fetchReviews(category).then((review) => {
+        fetchReviews(category, sortBy, orderBy).then((review) => {
             setReviews(review)
             setIsLoading(false)
         })
-    }, [category])
+    }, [category, orderBy, sortBy])
 
     const handleClick = (cat) => {
         setCategory(cat)
@@ -25,29 +25,38 @@ const Reviews = () => {
         setSortBy(event.target.value)
     }
 
+    const handleOrder = (event) => {
+        if (event.target.value === "asc"){
+            setOrderBy("asc")
+        }
+        else {
+            setOrderBy("desc")
+        }
+    }
+
     if (isLoading) return <h3>Loading...</h3>
     return <div className="reviewContent">
         <section className="categoryNav">
             <ul className="categoryList">
             Choose A Category: <br />
-                <Link to="/reviews"><li><button value="" onClick={(event) => {handleClick(event.target.value)}}>All</button></li></Link>
-                <Link to="/reviews/category/hidden-roles"><li><button value="hidden-roles" onClick={(event) => {handleClick(event.target.value)}}>Hidden Roles</button></li></Link>
-                <Link to="/reviews/category/dexterity"><li><button value="dexterity" onClick={(event) => {handleClick(event.target.value)}}>Dexterity</button></li></Link>
-                <Link to="/reviews/category/push-your-luck"><li><button value="push-your-luck" onClick={(event) => {handleClick(event.target.value)}}>Push Your Luck</button></li></Link>
-                <Link to="/reviews/category/roll-and-write"><li><button value="roll-and-write" onClick={(event) => {handleClick(event.target.value)}}>Roll and Write</button></li></Link>
-                <Link to="/reviews/category/deck-building"><li><button value="deck-building" onClick={(event) => {handleClick(event.target.value)}}>Deck Building</button></li></Link>
-                <Link to="/reviews/category/engine-building"><li><button value="engine-building" onClick={(event) => {handleClick(event.target.value)}}>Engine Building</button></li></Link>
+                <Link to="/reviews"><li><button className="catButton" value="all" onClick={(event) => {handleClick(event.target.value)}}>All</button></li></Link>
+                <Link to="/reviews/category/hidden-roles"><li><button className="catButton" value="hidden-roles" onClick={(event) => {handleClick(event.target.value)}}>Hidden Roles</button></li></Link>
+                <Link to="/reviews/category/dexterity"><li><button className="catButton" value="dexterity" onClick={(event) => {handleClick(event.target.value)}}>Dexterity</button></li></Link>
+                <Link to="/reviews/category/push-your-luck"><li><button className="catButton" value="push-your-luck" onClick={(event) => {handleClick(event.target.value)}}>Push Your Luck</button></li></Link>
+                <Link to="/reviews/category/roll-and-write"><li><button className="catButton" value="roll-and-write" onClick={(event) => {handleClick(event.target.value)}}>Roll and Write</button></li></Link>
+                <Link to="/reviews/category/deck-building"><li><button className="catButton" value="deck-building" onClick={(event) => {handleClick(event.target.value)}}>Deck Building</button></li></Link>
+                <Link to="/reviews/category/engine-building"><li><button className="catButton" value="engine-building" onClick={(event) => {handleClick(event.target.value)}}>Engine Building</button></li></Link>
             </ul>
         </section>
         <p className="sortText">Sort By:</p>
         <section className="sortBy">
-        <button className="orderBy" value="asc">Ascending</button>
+        <button className="orderBy" value="asc" onClick={handleOrder}>Ascending</button>
             <select className="sortDropdown" value={sortBy} onChange={handleDropdown}>
-                <option value="created_at">Created at</option>
+                <option value="created_at">Date</option>
                 <option value="comment_count">Comment Count</option>
                 <option value="votes">Votes</option>
             </select>
-            <button className="orderBy" value="desc">Descending</button>
+            <button className="orderBy" value="desc" onClick={handleOrder}>Descending</button>
         </section>
     <section>
         <ul className="reviewsList">
