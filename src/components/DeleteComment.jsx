@@ -3,11 +3,15 @@ import { deleteComment } from "../api"
 const DeleteComment = ({loggedIn, comment, setComments, comments}) => {
 
     const handleDelete = () => {
-        return deleteComment(comment.comment_id).then(()=>{
+        return deleteComment(comment.comment_id).then((err)=>{
+            if (err){
+                alert(err.message + " - Comment Was Not Deleted - Try Again")
+            }else {
             const newComments = comments.filter((data) => 
                 data.comment_id !== comment.comment_id
             )
             setComments(newComments)
+            }
         })
     }
 

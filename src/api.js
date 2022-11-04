@@ -48,6 +48,6 @@ export const postComment = (id, username, body) => {
 
 export const deleteComment = (id) => {
   return gamesApi.delete(`/comments/${id}`).catch((err) => {
-    console.log(err)
-  })
-}
+    return err;
+  });
+};
