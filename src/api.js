@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const gamesApi = axios.create({
-  baseURL: "https://nabeelgameproject.herokuapp.com/api",
+  baseURL: "https://ncgames-44ph.onrender.com/api/",
 });
 
 export const fetchReviews = (category, sort_by, order) => {

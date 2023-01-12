@@ -3,7 +3,7 @@
 }
 
 .body {
-  background-color:darkgray ;
+  background-color:#DAD7CD;
 }
 
 .reviewsList {
@@ -14,7 +14,7 @@ font-size: large;
 }
 
 .individualReview {
-  background-color:slategrey ;
+  background-color:#99A3A4 ;
   margin-bottom: 1cm;
   padding: 2%;
   border: solid;
@@ -33,10 +33,7 @@ font-size: large;
 }
 
 .header {
-  background-color:#666;
-  padding: 10px;
-  top: 0;
-  width: 100%;
+text-align: center;
 }
 
 .dropdown {
