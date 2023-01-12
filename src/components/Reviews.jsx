@@ -41,7 +41,7 @@ const Reviews = () => {
         }
     }
 
-    if (isLoading) return <h3>Loading...</h3>
+    if (isLoading) return <h3 className="load">Loading...</h3>
     return <div className="reviewContent">
         <section className="categoryNav">
             <ul className="categoryList">

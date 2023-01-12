@@ -18,7 +18,7 @@ const ReviewPage = (props) => {
         })
     }, [review_id])
 
-    return isLoading ?  <h3>Loading...</h3> :
+    return isLoading ?  <h3 className="load">Loading...</h3> :
     <section className="singleReviewPage">
         <h2>Review for: {review.title}</h2>
         <img src={`${review.review_img_url}`} alt={`${review.title}`} className="reviewImg"></img>

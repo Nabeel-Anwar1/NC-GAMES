@@ -13,6 +13,11 @@ grid-template-columns: 1fr 1fr 1fr;
 font-size: large;
 }
 
+.load {
+  text-align: center;
+  font-size: 20px;
+}
+
 .individualReview {
   background-color:#99A3A4 ;
   margin-bottom: 1cm;
@@ -34,6 +39,12 @@ font-size: large;
 
 .header {
 text-align: center;
+font-size: 25px;
+}
+
+.feature {
+ text-align: center;
+ font-size: 20px;
 }
 
 .dropdown {
