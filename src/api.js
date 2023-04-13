@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const gamesApi = axios.create({
-  baseURL: "https://ncgames-44ph.onrender.com/api/",
+  baseURL: "https://ncgames-8sfn.onrender.com/api/",
 });
 
 export const fetchReviews = (category, sort_by, order) => {

@@ -70,6 +70,7 @@ const Reviews = () => {
             {reviews.map((review) => {
             return <div key={review.review_id} className="individualReview">
                 {<Link to={`/reviews/${review.review_id}` }><li className="list-items">
+        <img src={`${review.review_img_url}`} alt={`${review.title}`} className="reviewImgs"></img><br/>
                     <b><u>Review By: {review.owner} </u></b> <br />
                     <b><u>Title:</u></b> {review.title}    <br />
                     <b><u>Category:</u></b> {review.category} <br />

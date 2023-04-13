@@ -19,7 +19,7 @@ font-size: large;
 }
 
 .individualReview {
-  background-color:#99A3A4 ;
+  background-color:#FBEEE6 ;
   margin-bottom: 1cm;
   padding: 2%;
   border: solid;
@@ -92,9 +92,16 @@ a {
   color: black ; 
   font-size: large;
 }
+.subhead {
+text-align: center;
+}
 
 .reviewImg {
   width: 200px;
+}
+.reviewImgs {
+  width: 200px;
+  height: 150px;
 }
 
 .singleReviewPage {
