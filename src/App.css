@@ -3,7 +3,7 @@
 }
 
 .body {
-  background-color:#DAD7CD;
+  background-color:#cacaca;
 }
 
 .reviewsList {
@@ -19,22 +19,34 @@ font-size: large;
 }
 
 .individualReview {
-  background-color:#FBEEE6 ;
   margin-bottom: 1cm;
   padding: 2%;
   border: solid;
   border-radius: 20px;
   width: 90%;
   text-align: center;
+  border-radius: 44px;
+background: linear-gradient(145deg, #f0f0f0, #cacaca);
+box-shadow:  5px 5px 10px #606060,
+             -5px -5px 10px #f0f0f0;
 }
 
-.individualReview:active {
-  box-shadow: 0 10px #666;
-  transform: translateY(7px);
+.individualReview:nth-child(even) {
+  margin-bottom: 1cm;
+  padding: 2%;
+  border: solid;
+  border-radius: 20px;
+  width: 90%;
+  text-align: center;
+  border-radius: 44px;
+background: linear-gradient(145deg, #cacaca, #f2f2f2f2);
+box-shadow:  5px 5px 10px #606060,
+             -5px -5px 10px #f0f0f0;
 }
 
 .individualReview:hover {
-  background-color: dimgray;
+  background: dimgray;
+  transform: translateY(10px);
 }
 
 .header {
@@ -69,7 +81,7 @@ text-align: center;
 }
 
 .categoryList button {
-  background-color:rgb(238, 235, 235);
+  background-color:#f0f0f0;
   padding: 5px;
   width: 100%;
   border-radius: 5px;
@@ -116,7 +128,7 @@ text-align: center;
 
 .votesSection button {
   border: solid;
-  background-color:rgb(238, 235, 235);
+  background-color:#f0f0f0;
   cursor: pointer;
   margin: 0 10px;
   margin-right: 5%;
@@ -150,7 +162,7 @@ margin-top: 50px;
 }
 
 .singleComment {
-  background-color:rgba(238, 235, 235, 0.698);
+  background-color:#f0f0f0;
   border: solid black;
   margin-bottom: 20px;
   padding: 15px;
@@ -174,7 +186,7 @@ margin-top: 50px;
   font-size: 16px;
   border: 3px solid black;
   border-radius: 5px;
-  background-color:rgb(238, 235, 235);
+  background-color:#f0f0f0;
   height: 34px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -217,7 +229,7 @@ margin-top: 50px;
 
 .sortDropdown {
   font-size: large;
-  background-color:rgb(238, 235, 235);
+  background-color:#f0f0f0;
   width: 10%;
   border: solid;
 }
@@ -237,7 +249,7 @@ margin-top: 50px;
   font-size: medium;
   margin-right: 20px;
   margin-left: 20px;
-  background-color:rgb(238, 235, 235);
+  background-color:rgba(181, 179, 179, 0.587);
   padding: 5px;
   width: 20%;
   border-radius: 5px;
