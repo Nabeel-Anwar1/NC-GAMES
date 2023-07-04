@@ -46,7 +46,7 @@ const Reviews = () => {
         <section className="categoryNav">
             <ul className="categoryList">
             Choose A Category: <br />
-                <Link to="/reviews"><li><button className="catButton" value="all" onClick={(event) => {handleClick(event.target.value)}}>All</button></li></Link>
+                <Link to="/"><li><button className="catButton" value="all" onClick={(event) => {handleClick(event.target.value)}}>All</button></li></Link>
                 <Link to="/reviews/category/hidden-roles"><li><button className="catButton" value="hidden-roles" onClick={(event) => {handleClick(event.target.value)}}>Hidden Roles</button></li></Link>
                 <Link to="/reviews/category/dexterity"><li><button className="catButton" value="dexterity" onClick={(event) => {handleClick(event.target.value)}}>Dexterity</button></li></Link>
                 <Link to="/reviews/category/push-your-luck"><li><button className="catButton" value="push-your-luck" onClick={(event) => {handleClick(event.target.value)}}>Push Your Luck</button></li></Link>

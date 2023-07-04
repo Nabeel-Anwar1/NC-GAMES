@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/" element={<Reviews />} />
           <Route path="/reviews/category/:category" element={<Reviews />} />
           <Route
             path="/reviews/:review_id"
