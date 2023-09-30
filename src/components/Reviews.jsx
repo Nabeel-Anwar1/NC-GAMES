@@ -41,7 +41,15 @@ const Reviews = () => {
     }
   };
 
-  if (isLoading) return <h3 className="load">Loading...</h3>;
+  if (isLoading)
+    return (
+      <section>
+        <h3 className="load">Loading...</h3>
+        <h4 className="load">
+          The database is spinning up! This may take a few minutes.
+        </h4>
+      </section>
+    );
   return (
     <div className="reviewContent">
       <section className="categoryNav">

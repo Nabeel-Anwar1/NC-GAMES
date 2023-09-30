@@ -20,9 +20,6 @@ const Home = () => {
   return isLoading ? (
     <div>
       <h3 className="load">Loading...</h3>
-      <h4 className="load">
-        The database is spinning up! This may take a few minutes.
-      </h4>
     </div>
   ) : (
     <div>
