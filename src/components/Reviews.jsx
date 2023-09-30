@@ -12,6 +12,7 @@ const Reviews = () => {
     sort_by: "",
     order: "",
   });
+  console.log(searchParams);
 
   useEffect(() => {
     setIsLoading(true);
@@ -19,7 +20,6 @@ const Reviews = () => {
       setReviews(review);
       setIsLoading(false);
     });
-    console.log(searchParams);
   }, [category, orderBy, sortBy]);
 
   const handleClick = (cat) => {
